@@ -15,12 +15,12 @@ module.exports = {
 		"@release-it/bumper": {
 			"in": [
 				"composer.json", 
-			]
+			],
 			"out": [
 				"composer.json", 
 			]
 		}
-	}
+	},
 	'git' : {
 		'requireBranch' : 'main',
 		'commitMessage' : 'Release v${version}',
@@ -41,7 +41,7 @@ module.exports = {
 	    ],
 	},
 	'github' : {
-		'release' : true,
+		'release' : false,
 	},
 	'npm' : {
 		'release' : false,
