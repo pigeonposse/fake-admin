@@ -35,11 +35,25 @@ jobs:
     steps:
 
       #########################################################################
-      # INIT & BUILD PKG
+      # INIT
       #########################################################################
       - name: checks-out repository
         uses: actions/checkout@v3
 
+      # PHP
+      - name: Install php
+        uses: "shivammathur/setup-php@v2"
+        with:
+          php-version: "latest"
+      
+      # COMPOSER
+      - name: Install composer
+        uses: "ramsey/composer-install@v2"
+
+      # PNPM
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
 
       #########################################################################
       # IF IS IN MAIN BRANCH
@@ -49,18 +63,9 @@ jobs:
       #   if: endsWith(github.ref, 'main') == false
       #   run: exit -1
 
-
       #########################################################################
       # BUILD PKG
       #########################################################################
-      
-      - name: Install composer
-        uses: php-actions/composer@v6
-        id: composer-install
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        id: pnpm-install
 
       - name: Install pkg dependencies
         run: |
