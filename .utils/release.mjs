@@ -27,7 +27,7 @@ inquirer.prompt(questions).then((answers) => {
 
 	const gitAdd = 'git add '+ answers.git_add
 	const gitCommit = 'git commit -m "'+ answers.git_commit+'"'
-	const releaseIt = 'release-it'
+	const releaseIt = 'pnpm release-it'
 	 
 	spawnSync( gitAdd, {
 		shell : true,
