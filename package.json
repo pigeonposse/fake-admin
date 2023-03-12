@@ -21,7 +21,7 @@
 		"build": "pnpm plugin-file && run-s build:**",
 		"build:composer": "composer install --no-dev",
 		"build:zip": "node .utils/zip.js",
-		"release": "release-it",
+		"release": "node .utils/release.mjs",
 		"watch": "pnpm build && run-s dev:**",
 		"pot": "composer run-script pot",
 		"php-error": "composer run-script error",
