@@ -71,7 +71,7 @@ jobs:
 
       - name: Install pkg dependencies
         run: |
-          pnpm start
+          pnpm i
           pnpm build
         env:
           GITHUB_TOKEN: ${{ github.token }}
