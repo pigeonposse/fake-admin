@@ -32,3 +32,4 @@ pnpm-lock.yaml
 .release-it.js
 .plugin-info.js
 dist
+.utils
