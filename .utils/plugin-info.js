@@ -8,7 +8,8 @@
  */
 
 
-const pkg = require( '../composer.json' )
+const composer = require( '../composer.json' )
+const pkg = require( '../package.json' )
 const fs = require('fs');
 var path = require('path');
 
@@ -23,14 +24,14 @@ const pluginChange = `<?php
  * that starts the plugin.
  *
  * @wordpress-plugin
- * Plugin Name:       ${pkg.extra.pluginName}
- * Description:       ${pkg.extra.description}
+ * Plugin Name:       ${composer.extra.pluginName}
+ * Description:       ${composer.extra.description}
  * Version:           ${pkg.version}
- * Author:            ${pkg.authors[0].name}
- * Author URI:        ${pkg.authors[0].homepage}
- * License:           ${pkg.license}
- * License URI:       ${pkg.repositories.github.url}/blob/main/LICENSE
- * Text Domain:       ${pkg.extra.textDomain}
+ * Author:            ${composer.authors[0].name}
+ * Author URI:        ${composer.authors[0].homepage}
+ * License:           ${composer.license}
+ * License URI:       ${composer.repositories.github.url}/blob/main/LICENSE
+ * Text Domain:       ${composer.extra.textDomain}
  * Domain Path:       /web/lang
  */
 
@@ -47,7 +48,7 @@ $loader->addPsr4('PigeonPosse\\\\FakeAdmin\\\\Utils\\\\', __DIR__.'/src/utils/')
 
 require_once 'src/plugin.php';
 `
-const pluginFile = path.join(__dirname, '../'+pkg.extra.pluginFile )
+const pluginFile = path.join(__dirname, '../'+composer.extra.pluginFile )
 
 // console.log(pluginFile)
 

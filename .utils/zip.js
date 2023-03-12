@@ -15,9 +15,9 @@ function zipDirectory(sourceDir, outPath) {
 
   return new Promise((resolve, reject) => {
     archive
-      .directory(sourceDir, false)
-      .on('error', err => reject(err))
-      .pipe(stream)
+		.directory(sourceDir, false)
+		.on('error', err => reject(err))
+		.pipe(stream)
     ;
 
     stream.on('close', () => resolve());
