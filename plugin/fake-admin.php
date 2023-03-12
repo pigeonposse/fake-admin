@@ -11,10 +11,10 @@
  * @wordpress-plugin
  * Plugin Name:       Fake Admin
  * Description:       🕵️‍♀️🔌 Prevents your admin user from being exposed to the public.
- * Version:           0.0.2
+ * Version:           undefined
  * Author:            Angelo
  * Author URI:        https://pigeonposse.com
- * License:           GPL-3.0
+ * License:           GPL-3.0-only
  * License URI:       https://github.com/pigeonposse/fake-admin/blob/main/LICENSE
  * Text Domain:       fake-admin
  * Domain Path:       /web/lang
