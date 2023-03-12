@@ -27,7 +27,7 @@ function zipDirectory(sourceDir, outPath) {
 
 const distPath = '../dist';
 const pluginPath = path.join(__dirname, 'plugin')
-const zipPath = path.join(__dirname, `${distPath}/${pkg.custom.textDomain}.zip`)
+const zipPath = path.join(__dirname, `${distPath}/${pkg.extra.textDomain}.zip`)
 
 if (fs.existsSync(distPath)) {
   fs.rmSync(distPath, { recursive: true });

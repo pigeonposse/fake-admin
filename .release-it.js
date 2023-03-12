@@ -11,16 +11,6 @@ const pkg    = require( './composer.json' )
 const topics = pkg.keywords.join( ',' )
 
 module.exports = {
-	"plugins": {
-		"@release-it/bumper": {
-			"in": [
-				"composer.json", 
-			],
-			"out": [
-				"composer.json", 
-			]
-		}
-	},
 	'git' : {
 		'requireBranch' : 'main',
 		'commitMessage' : 'Release v${version}',

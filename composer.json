@@ -1,6 +1,6 @@
 {
-	"name": "fake-admin",
-	"version": "0.0.3",
+	"name": "pigeonposse/fake-admin",
+	"type": "library",
 	"description": "🕵️‍♀️🔌 Wordpress plugin that prevents your admin user from being exposed to the public.",
 	"require-dev": {
 		"phpunit/phpunit": "^6",
@@ -20,7 +20,7 @@
 		"error": "phpcs --extensions=php",
 		"fix": "phpcbf --extensions=php"
 	},
-	"license": "GPL-3.0",
+	"license": "GPL-3.0-only",
 	"keywords": [
 		"wp",
 		"wp-plugin",
@@ -62,7 +62,7 @@
 			"url": "https://github.com/pigeonposse/fake-admin"
 		}
 	},
-	"custom": {
+	"extra": {
 		"pluginName": "Fake Admin",
 		"textDomain": "fake-admin",
 		"pluginFile": "plugin/fake-admin.php",

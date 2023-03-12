@@ -23,14 +23,14 @@ const pluginChange = `<?php
  * that starts the plugin.
  *
  * @wordpress-plugin
- * Plugin Name:       ${pkg.custom.pluginName}
- * Description:       ${pkg.custom.description}
+ * Plugin Name:       ${pkg.extra.pluginName}
+ * Description:       ${pkg.extra.description}
  * Version:           ${pkg.version}
  * Author:            ${pkg.authors[0].name}
  * Author URI:        ${pkg.authors[0].homepage}
  * License:           ${pkg.license}
  * License URI:       ${pkg.repositories.github.url}/blob/main/LICENSE
- * Text Domain:       ${pkg.custom.textDomain}
+ * Text Domain:       ${pkg.extra.textDomain}
  * Domain Path:       /web/lang
  */
 
@@ -47,7 +47,7 @@ $loader->addPsr4('PigeonPosse\\\\FakeAdmin\\\\Utils\\\\', __DIR__.'/src/utils/')
 
 require_once 'src/plugin.php';
 `
-const pluginFile = path.join(__dirname, '../'+pkg.custom.pluginFile )
+const pluginFile = path.join(__dirname, '../'+pkg.extra.pluginFile )
 
 // console.log(pluginFile)
 
