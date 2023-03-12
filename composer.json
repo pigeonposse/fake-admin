@@ -1,25 +1,25 @@
 {
 	"name": "fake-admin",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "🕵️‍♀️🔌 Wordpress plugin that prevents your admin user from being exposed to the public.",
-    "require-dev": {
-        "phpunit/phpunit": "^6",
-        "squizlabs/php_codesniffer": "3.*",
-        "wp-coding-standards/wpcs": "*",
+	"require-dev": {
+		"phpunit/phpunit": "^6",
+		"squizlabs/php_codesniffer": "3.*",
+		"wp-coding-standards/wpcs": "*",
 		"wp-cli/wp-cli": "^2.7"
-    },
-	"config": {
-	    "vendor-dir": "plugin/vendor"
 	},
-    "scripts": {
-        "setup": [
-            "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
-            "phpcs --config-set default_standard WordPress"
-        ],
-        "pot": "wp i18n make-pot . plugin/src/lang/fake-admin.pot",
-        "error": "phpcs --extensions=php",
-        "fix": "phpcbf --extensions=php"
-    },
+	"config": {
+		"vendor-dir": "plugin/vendor"
+	},
+	"scripts": {
+		"setup": [
+			"phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
+			"phpcs --config-set default_standard WordPress"
+		],
+		"pot": "wp i18n make-pot . plugin/src/lang/fake-admin.pot",
+		"error": "phpcs --extensions=php",
+		"fix": "phpcbf --extensions=php"
+	},
 	"license": "GPL-3.0",
 	"keywords": [
 		"wp",
@@ -33,16 +33,16 @@
 	],
 	"authors": [
 		{
-            "name": "Angelo",
-            "email": "angelo@pigeonposse.com",
-            "homepage": "https://pigeonposse.com",
-            "role": "Developer"
+			"name": "Angelo",
+			"email": "angelo@pigeonposse.com",
+			"homepage": "https://pigeonposse.com",
+			"role": "Developer"
 		},
 		{
-            "name": "PigeonPosse Team",
-            "email": "dev@pigeonposse.com",
-            "homepage": "https://pigeonposse.com",
-            "role": "Collective"
+			"name": "PigeonPosse Team",
+			"email": "dev@pigeonposse.com",
+			"homepage": "https://pigeonposse.com",
+			"role": "Collective"
 		}
 	],
 	"funding": [
@@ -56,16 +56,16 @@
 		}
 	],
 	"homepage": "https://github.com/pigeonposse/fake-admin",
-    "repositories": {
-        "github": {
-            "type": "git",
-            "url": "https://github.com/pigeonposse/fake-admin"
-        }
-    }, 
-    "custom" : {
-    	"pluginName": "Fake Admin",
-    	"textDomain": "fake-admin",
-    	"pluginFile": "plugin/fake-admin.php",
-    	"description": "🕵️‍♀️🔌 Prevents your admin user from being exposed to the public."
-    }
+	"repositories": {
+		"github": {
+			"type": "git",
+			"url": "https://github.com/pigeonposse/fake-admin"
+		}
+	},
+	"custom": {
+		"pluginName": "Fake Admin",
+		"textDomain": "fake-admin",
+		"pluginFile": "plugin/fake-admin.php",
+		"description": "🕵️‍♀️🔌 Prevents your admin user from being exposed to the public."
+	}
 }
