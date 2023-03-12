@@ -49,6 +49,8 @@ jobs:
       # COMPOSER
       - name: Install composer
         uses: "ramsey/composer-install@v2"
+        with:
+          composer-options: "--ignore-platform-reqs --optimize-autoloader"
 
       # PNPM
       - name: Install pnpm
