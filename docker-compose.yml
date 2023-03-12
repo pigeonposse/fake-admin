@@ -1,0 +1,39 @@
+# /wp-docker/docker-compose.yml
+# doc: https://docs.docker.com/compose/
+
+version: '3.8'
+
+services:
+  # Database
+  db:
+    image: mariadb
+    container_name: ${NAME}-db
+    command: --default-authentication-plugin=mysql_native_password  
+    volumes:
+      - './dev-env/mariadb:/var/lib/mysql'
+    restart: always
+    env_file: .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD} 
+  # Wordpress
+  wp:
+    depends_on:
+      - db
+    image: wordpress:latest
+    container_name: ${NAME}
+    ports:
+      - '${WP_PORT}'
+    restart: always
+    volumes:
+      - ./dev-env/wp:/var/www/html
+      - ./plugin:/var/www/html/wp-content/plugins/fake-admin
+    env_file: .env
+    environment:
+      WORDPRESS_DB_HOST: ${WP_DB_HOST}
+      WORDPRESS_DB_USER: ${DB_USER}
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
+      WORDPRESS_TABLE_PREFIX: ${WP_TABLE_PREFIX}
+      WORDPRESS_DEBUG: ${WP_DEBUG} 

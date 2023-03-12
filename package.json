@@ -1,0 +1,39 @@
+{
+	"private": true,
+	"name": "fake-admin",
+	"version": "0.0.0",
+	"main": "plugin/fake-admin.php",
+	"engines": {
+		"node": "^12.17.0 || ^14.13 || >=16.0.0",
+		"pnpm": ">=3"
+	},
+	"packageManager": "pnpm@7.26.0",
+	"scripts": {
+		"start": "composer install && pnpm i",
+		"update": "pnpm up && composer update",
+		"plugin-file": "node .plugin-info.js",
+		"dev": "pnpm plugin-file && pnpm dev-composer && run-s dev:**",
+		"dev:docker": "docker-compose up -d --remove-orphans",
+		"dev:text": "node ./.docker-env.mjs --start-text",
+		"dev-composer": "composer run-script setup",
+		"dev-stop": "docker-compose down --volumes",
+		"dev-logs": "docker-compose logs",
+		"build": "pnpm plugin-file && run-s build:**",
+		"build:composer": "composer install --no-dev",
+		"build:zip": "node .zip.js",
+		"release": "release-it",
+		"watch": "pnpm build && run-s dev:**",
+		"pot": "composer run-script pot",
+		"php-error": "composer run-script error",
+		"php-fix": "composer run-script fix"
+	},
+	"devDependencies": {
+		"@release-it/bumper": "^4.0.2",
+		"archiver": "^5.3.1",
+		"auto-changelog": "^2.4.0",
+		"chalk": "^5.2.0",
+		"dotenv": "^16.0.3",
+		"npm-run-all": "^4.1.5",
+		"release-it": "^15.8.0"
+	}
+}

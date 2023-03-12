@@ -1,0 +1,7 @@
+node_modules
+.DS_Store
+**/.DS_Store
+**/vendor
+vendor
+dist
+dev-env
