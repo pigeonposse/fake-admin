@@ -55,9 +55,8 @@ jobs:
       #########################################################################
       
       - name: Install composer
-        uses: MilesChou/composer-action@master
-        with:
-          args: install
+        uses: php-actions/composer@v6
+        id: composer-install
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
