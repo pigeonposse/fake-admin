@@ -8,8 +8,9 @@
  */
 
 
-const pkg = require( './composer.json' )
+const pkg = require( '../composer.json' )
 const fs = require('fs');
+var path = require('path');
 
 const pluginChange = `<?php 
 
@@ -46,8 +47,11 @@ $loader->addPsr4('PigeonPosse\\\\FakeAdmin\\\\Utils\\\\', __DIR__.'/src/utils/')
 
 require_once 'src/plugin.php';
 `
+const pluginFile = path.join(__dirname, '../'+pkg.custom.pluginFile )
 
-fs.writeFile(pkg.custom.pluginFile, pluginChange, (err) => {
+// console.log(pluginFile)
+
+fs.writeFile(pluginFile, pluginChange, (err) => {
   if (err) throw err;
   console.log('File overwritten!');
 });

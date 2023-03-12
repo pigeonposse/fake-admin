@@ -1,7 +1,7 @@
 
 var fs = require('fs');
 var path = require('path');
-const pkg = require( './composer.json' )
+const pkg = require( '../composer.json' )
 var archiver = require('archiver');
 
 /**
@@ -25,9 +25,9 @@ function zipDirectory(sourceDir, outPath) {
   });
 }
 
-const distPath = './dist';
+const distPath = '../dist';
 const pluginPath = path.join(__dirname, 'plugin')
-const zipPath = path.join(__dirname, `dist/${pkg.custom.textDomain}.zip`)
+const zipPath = path.join(__dirname, `${distPath}/${pkg.custom.textDomain}.zip`)
 
 if (fs.existsSync(distPath)) {
   fs.rmSync(distPath, { recursive: true });
