@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"name": "fake-admin",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"main": "plugin/fake-admin.php",
 	"engines": {
 		"node": "^12.17.0 || ^14.13 || >=16.0.0",
