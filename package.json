@@ -11,6 +11,7 @@
 	"scripts": {
 		"start": "composer install && pnpm i",
 		"update": "pnpm up && composer update",
+		"plugin-readme": "node .utils/plugin-readme.js",
 		"plugin-file": "node .utils/plugin-info.js",
 		"dev": "pnpm plugin-file && pnpm dev-composer && run-s dev:**",
 		"dev:docker": "docker-compose up -d --remove-orphans",
@@ -18,7 +19,7 @@
 		"dev-composer": "composer run-script setup",
 		"dev-stop": "docker-compose down --volumes",
 		"dev-logs": "docker-compose logs",
-		"build": "pnpm plugin-file && run-s build:**",
+		"build": "pnpm plugin-readme && pnpm plugin-file && run-s build:**",
 		"build:composer": "composer install --no-dev",
 		"build:zip": "node .utils/zip.js",
 		"release": "node .utils/release.mjs",

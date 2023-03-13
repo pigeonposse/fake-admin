@@ -66,6 +66,7 @@
 		"pluginName": "Fake Admin",
 		"textDomain": "fake-admin",
 		"pluginFile": "plugin/fake-admin.php",
-		"description": "🕵️‍♀️🔌 Prevents your admin user from being exposed to the public."
+		"description": "🕵️‍♀️🔌 Prevents your admin user from being exposed to the public.",
+		"pluginReadMe": "plugin/readme.txt"
 	}
 }
