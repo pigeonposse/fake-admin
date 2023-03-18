@@ -102,13 +102,13 @@ Help us to develop more interesting things.
 
 This software is licensed with ***[GPLv3](/LICENSE)***.
 
-[![Read more](https://img.shields.io/badge/Read-more-grey?style=flat-square)](https://github.com/pigeonposse/fake-admin/blob/main/LICENSE)
+[![Read more](https://img.shields.io/badge/Read-more-grey?style=flat-square)](/LICENSE)
 
 ## 🐦 About us
 
 _PigeonPosse_ is a ✨ **code development collective** ✨ focused on creating practical and interesting tools that help developers and users enjoy a more agile and comfortable experience. Our projects cover various programming sectors and we do not have a thematic limitation in terms of projects.
 
-[![More](https://img.shields.io/badge/Read-more-grey?style=flat-square)](https://github.com/PigeonPosse/PigeonPosse)
+[![More](https://img.shields.io/badge/Read-more-grey?style=flat-square)](https://github.com/PigeonPosse)
 
 ### Collaborators
 
