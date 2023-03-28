@@ -42,7 +42,7 @@ DEVELOPED BY PIGEONPOSSE
 
 [![IMAGE](docs/banner.png)](https://pigeonposse.com)
 
-# Fake Admin - Worpress plugin
+# Fake Admin - Wordpress plugin
 
 🕵️‍♀️🔌 Wordpress plugin that prevents your admin user from being exposed to the public.
 
