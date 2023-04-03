@@ -6,7 +6,8 @@ web:
   
   - id: "{{package.name}}"
     name: Fake Admin
-    type: wp-plugin
+    type: plugin
+    subtype: wordpress
     version: "{{package.version}}"
     description: "{{package.description}}"
     homepage: "{{package.homepage}}"
