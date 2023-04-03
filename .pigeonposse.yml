@@ -9,8 +9,8 @@ web:
     type: plugin
     subtype: wordpress
     version: "{{package.version}}"
-    description: "{{package.description}}"
-    homepage: "{{package.homepage}}"
+    description: "{{composer.description}}"
+    homepage: "{{composer.homepage}}"
     repo: "https://github.com/pigeonposse/{{package.name}}"
     logo: "https://raw.githubusercontent.com/pigeonposse/{{package.name}}/main/docs/logo.png"
     banner: "https://raw.githubusercontent.com/pigeonposse/{{package.name}}/main/docs/banner.png"
