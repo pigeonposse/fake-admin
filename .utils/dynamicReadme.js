@@ -4,10 +4,10 @@
  * @description Todo.
  */
 
-import fs                                 from 'fs'
-import { join }                           from 'path'
-import { writeFile, addTextBetweenAMark } from './writeFile.js'
-import { readme }                         from './templates/readme.js'
+import fs                      from 'fs'
+import { join }                from 'path'
+import { addTextBetweenAMark } from './writeFile.js'
+import { readme }              from './templates/readme.js'
 
 const dynamicReadme = async () => {
 
