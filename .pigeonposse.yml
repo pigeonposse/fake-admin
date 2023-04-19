@@ -5,15 +5,15 @@
 web:
   
   - id: "{{package.name}}"
-    name: Fake Admin
+    name: "{{composer.extra.pluginName}}"
     type: plugin
     subtype: wordpress
     version: "{{package.version}}"
     description: "{{composer.description}}"
     homepage: "{{composer.homepage}}"
-    repo: "https://github.com/pigeonposse/{{package.name}}"
-    logo: "https://raw.githubusercontent.com/pigeonposse/{{package.name}}/main/docs/logo.png"
-    banner: "https://raw.githubusercontent.com/pigeonposse/{{package.name}}/main/docs/banner.png"
+    repo: "{{composer.repositories.github.url}}"
+    logo: "https://raw.githubusercontent.com/{{composer.name}}/main/docs/logo.png"
+    banner: "https://raw.githubusercontent.com/{{composer.name}}/main/docs/banner.png"
 
 
 ###############################################################################

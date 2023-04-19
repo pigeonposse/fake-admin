@@ -27,6 +27,7 @@ const zipDirectory = ( sourceDir, outPath ) => {
 	} )
 
 }
+
 try{
 
 	const distPath   = path.join( composer.dir, 'dist' )
@@ -37,7 +38,8 @@ try{
 
 	if ( fs.existsSync( distPath ) ) fs.rmSync( distPath, { recursive: true } )
 
-	fs.mkdirSync( distPath )
+	fs.mkdirSync( distPath
+ )
 
 	zipDirectory( pluginPath, zipPath )
 

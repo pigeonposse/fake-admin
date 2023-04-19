@@ -51,7 +51,11 @@ services:
     volumes:
       - './dev-env/db:/var/lib/mysql'
     restart: always
-    env_file: .env
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=wordpress
+      - MYSQL_PASSWORD=wordpress
 
 
   #########################################################################
@@ -71,7 +75,12 @@ services:
       - ./dev-env/wp:/var/www/html
       - ./plugin:/var/www/html/wp-content/plugins/${pkg.data.name}
       - ./dev-env/wp-cli:/var/www/html/wp-cli
-    env_file: .env
+    environment:
+      - WORDPRESS_DB_HOST=db:3306
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress
+      - WORDPRESS_TABLE_PREFIX=wp_
+      - WORDPRESS_DEBUG='true'
 
 
   #########################################################################
@@ -89,8 +98,13 @@ services:
       - ./dev-env/wp:/var/www/html
       - ./plugin:/var/www/html/wp-content/plugins/${pkg.data.name}
       - ./dev-env/wp-cli:/var/www/html/wp-cli
-    env_file: .env
     command: sleep 3600
+    environment:
+      - WORDPRESS_DB_HOST=db:3306
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress
+      - WORDPRESS_TABLE_PREFIX=wp_
+      - WORDPRESS_DEBUG='true'
 
 
 ################ ${mark} ################`
