@@ -33,7 +33,7 @@
 ╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝                        
                                                 
 VERSION:    1.0.2 
-AUTHOR:     Angelo (https://github.com/Angelo)
+AUTHOR:     Angelo (https://github.com/AngelEspejo)
 REPOSITORY: https://github.com/pigeonposse/fake-admin
 
 DEVELOPED BY PIGEONPOSSE 🐦🌈
@@ -116,7 +116,7 @@ _PigeonPosse_ is a ✨ **code development collective** ✨ focused on creating p
 
 |                                                                                    | Name        | Role         | GitHub                                         |
 | ---------------------------------------------------------------------------------- | ----------- | ------------ | ---------------------------------------------- |
-| <img src="https://github.com/Angelo.png?size=72" style="border-radius:100%"/> | Angelo |   Author   | [@Angelo](https://github.com/Angelo) |
+| <img src="https://github.com/AngelEspejo.png?size=72" style="border-radius:100%"/> | Angelo |   Author   | [@Angelo](https://github.com/AngelEspejo) |
 | <img src="https://github.com/PigeonPosse.png?size=72" style="border-radius:100%"/> | PigeonPosse | Collective	  | [@PigeonPosse](https://github.com/PigeonPosse) |
 
 
