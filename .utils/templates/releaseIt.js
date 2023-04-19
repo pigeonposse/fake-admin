@@ -21,10 +21,12 @@ const data = {
 	'hooks' : {
 		'before:init' : [ 
 			'git push', 
+		],
+	    'after:bump' : [
 			'pnpm readme',
 			'pnpm build',
-		],
-	    'after:bump'        : 'pnpm auto-changelog -p',
+	    	'pnpm auto-changelog -p',
+	    ],
 	    'after:git:release' : 'echo \'After git push, before github release\'',
 	    'after:release'     : [
 	    	`gh repo edit ${gitUrl} -d \"${composer.data.description}\"`,

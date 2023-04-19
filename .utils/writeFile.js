@@ -32,6 +32,6 @@ export const addTextBetweenAMark = async ( path, startMarker, endMarker, textToA
 	const endIndex       = fileContent.indexOf( endMarker )
 	const newTextContent = `${fileContent.substring( 0, startIndex )}\n${textToAdd}\n${fileContent.substring( endIndex )}`
 
-	writeSync( filePath, newTextContent )
+	writeSync( path, newTextContent )
 
 }
