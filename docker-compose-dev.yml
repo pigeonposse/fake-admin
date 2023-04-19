@@ -1,0 +1,78 @@
+################ PIGEONPOSSE [FAKE ADMIN] - DOCKER-COMPOSE DEV ################
+#
+# PIGEONPOSSE [FAKE ADMIN]
+# 
+# @description Run WP enviroment for plugin development.
+#              Easy to use.
+# @usage       - docker-compose -f docker-compose-dev.yml up -d
+#              - pnpm docker-compose-dev
+# @link        https://docs.docker.com/compose/
+# @link        https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/
+#
+###############################################################################
+
+version: "3.8"
+
+
+###############################################################################
+# SERVICES
+###############################################################################
+
+services:          
+
+
+  #########################################################################
+  # DATABASE
+  #########################################################################
+  
+  db:
+
+    image: mariadb
+    container_name: fake-admin-db
+    command: --default-authentication-plugin=mysql_native_password  
+    volumes:
+      - './dev-env/db:/var/lib/mysql'
+    restart: always
+    env_file: .env
+
+
+  #########################################################################
+  # WP
+  #########################################################################
+  
+  wp:
+
+    image: wordpress:latest
+    container_name: fake-admin-wp
+    depends_on:
+      - db
+    ports:
+      - 41312:80
+    restart: always
+    volumes:
+      - ./dev-env/wp:/var/www/html
+      - ./plugin:/var/www/html/wp-content/plugins/fake-admin
+      - ./dev-env/wp-cli:/var/www/html/wp-cli
+    env_file: .env
+
+
+  #########################################################################
+  # WP-CLI
+  #########################################################################
+  
+  wpcli:
+  
+    image: wordpress:cli
+    container_name: fake-admin-wpcli
+    depends_on:
+      - db
+      - wp
+    volumes:
+      - ./dev-env/wp:/var/www/html
+      - ./plugin:/var/www/html/wp-content/plugins/fake-admin
+      - ./dev-env/wp-cli:/var/www/html/wp-cli
+    env_file: .env
+    command: sleep 3600
+
+
+################ PIGEONPOSSE [FAKE ADMIN] - DOCKER-COMPOSE DEV ################

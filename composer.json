@@ -16,7 +16,6 @@
 			"phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
 			"phpcs --config-set default_standard WordPress"
 		],
-		"pot": "wp i18n make-pot . plugin/src/lang/fake-admin.pot",
 		"error": "phpcs --extensions=php",
 		"fix": "phpcbf --extensions=php"
 	},
@@ -65,8 +64,40 @@
 	"extra": {
 		"pluginName": "Fake Admin",
 		"textDomain": "fake-admin",
+		"description": "🕵️‍♀️🔌 Prevent your administrator user from being exposed to the public with just a few clicks. Create a user or change the role of an existing one to Fake-Admin and you're done! easy to use and very practical.",
+		"dockerComposeDevFile": "docker-compose-dev.yml",
+		"pluginDir": "plugin",
 		"pluginFile": "plugin/fake-admin.php",
-		"description": "🕵️‍♀️🔌 Prevents your admin user from being exposed to the public.",
-		"pluginReadMe": "plugin/readme.txt"
+		"pluginLang": "plugin/src/lang",
+		"pluginDomainPath": "/src/lang",
+		"pluginPot": "plugin/src/lang/fake-admin.pot",
+		"pluginReadMe": "plugin/readme.txt",
+		"releaseIt": ".release-it.json",
+		"wpTags": [
+			"security", 
+			"users", 
+			"roles", 
+			"admin", 
+			"wp-admin", 
+			"administrator"
+		],
+		"devPort" : "41312",
+		"contributors": {
+		 	"author": {
+				"name": "Angelo",
+				"email": "angelo@pigeonposse.com",
+				"github": "https://github.com/Angelo"
+			},
+			"collective": {
+				"name": "PigeonPosse",
+				"email": "dev@pigeonposse.com",
+				"github": "https://github.com/PigeonPosse"
+			}
+		},
+		"loaders": {
+			"src": "PigeonPosse\\\\FakeAdmin\\\\",
+			"src/inc": "PigeonPosse\\\\FakeAdmin\\\\Inc\\\\",
+			"src/utils": "PigeonPosse\\\\FakeAdmin\\\\Utils\\\\"
+		}
 	}
 }

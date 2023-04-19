@@ -41,10 +41,11 @@ class Notices {
 
         // args
         $args = [
-            'type'          => $type,
+            'type'          => ( $type == 'success' || $type == 'warning' || $type == 'error' || $type == 'info' ) ? $type : 'info',
             'message'       => $message,
             'dismissible'   => $dismissible,
-            'for_update'    => $for_update
+            'for_update'    => $for_update,
+            "imgUrl"        => plugin_dir_url( __DIR__ ) . 'assets/img/logo.png'
         ];
 
         // condition

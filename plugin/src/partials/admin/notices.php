@@ -7,17 +7,21 @@
  */
 
 /** Restricted access on frontend */
-if ( !defined('ABSPATH') ) exit(); 
+if ( !defined( 'ABSPATH' ) ) return;
 
 $dismissible = ( true == $args['dismissible'] ) ? 'is-dismissible' : '';
 $type        = 'notice notice-'.$args['type'];
-$msg         = $args['message'];
+$msg         = $args['message'] ? $args['message'] : '';
 $update      = ( true == $args['for_update'] ) ? 'updated' : '' ;
-$img 		 = '<img src="'.plugins_url().'/fake-admin/src/assets/img/logo.png" width="30px" height="30px" style="margin-right: 10px; border-radius: 5px;"></img>';
-
+$img 		 = '<img src="' . esc_url($args['imgUrl']).'" width="30px" height="30px" style="margin-right: 10px; border-radius: 5px;"></img>';
+$style 		 = 'display: flex;padding: 5px 10px;flex-wrap: nowrap;align-items: center;';
 ?>
 
-<div id="message" class="<?php echo $update.' '.$type.' '.$dismissible; ?>" style="display: flex;padding: 5px 10px;flex-wrap: nowrap;align-items: center;">
-	<?php echo $img; ?>
-    <p><?php echo $msg; ?></p>
+<div 
+	id="message" 
+	class="<?php echo esc_attr( $update.' '.$type.' '.$dismissible ); ?>" 
+	style="<?php echo esc_attr($style); ?>"
+	>
+	<?php echo wp_kses_post($img); ?>
+    <p><?php echo wp_kses_post($msg); ?></p>
 </div>

@@ -1,0 +1,25 @@
+{
+    "git": {
+        "requireBranch": "main",
+        "commitMessage": "Release v${version}"
+    },
+    "hooks": {
+        "before:init": [
+            "git push",
+            "pnpm plugin-file"
+        ],
+        "after:bump": "pnpm auto-changelog -p",
+        "after:git:release": "echo 'After git push, before github release'",
+        "after:release": [
+            "gh repo edit https://github.com/pigeonposse/fake-admin -d \"🕵️‍♀️🔌 Wordpress plugin that prevents your admin user from being exposed to the public.\"",
+            "gh repo edit https://github.com/pigeonposse/fake-admin --add-topic wp,wp-plugin,wordpress-plugin,plugin,wordpress-admin,wordpress-roles,php,fake-admin",
+            "echo 'Github action is now releasing: pigeonposse/fake-admin v${version} to https://github.com/pigeonposse/fake-admin.\n Check if all is ok 🌈🤖\n https://github.com/pigeonposse/fake-admin/actions'"
+        ]
+    },
+    "github": {
+        "release": false
+    },
+    "npm": {
+        "release": false
+    }
+}

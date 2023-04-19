@@ -1,40 +1,48 @@
-
-var fs = require('fs');
-var path = require('path');
-const pkg = require( '../composer.json' )
-var archiver = require('archiver');
-
 /**
- * @param {String} sourceDir: /some/folder/to/compress
- * @param {String} outPath: /path/to/created.zip
- * @returns {Promise}
+ * Zip plugin.
+ *
+ * @description Todo.
  */
-function zipDirectory(sourceDir, outPath) {
-  const archive = archiver('zip', { zlib: { level: 9 }});
-  const stream = fs.createWriteStream(outPath);
 
-  return new Promise((resolve, reject) => {
-    archive
-		.directory(sourceDir, false)
-		.on('error', err => reject(err))
-		.pipe(stream)
-    ;
+import fs           from 'fs'
+import path         from 'path'
+import { composer } from './getPkg.js'
+import archiver     from 'archiver'
 
-    stream.on('close', () => resolve());
-    archive.finalize();
-  });
+const zipDirectory = ( sourceDir, outPath ) => {
+
+	const archive = archiver( 'zip', { zlib: { level: 9 } } )
+	const stream  = fs.createWriteStream( outPath )
+
+	return new Promise( ( resolve, reject ) => {
+
+		archive
+			.directory( sourceDir, false )
+			.on( 'error', err => reject( err ) )
+			.pipe( stream )
+
+		stream.on( 'close', () => resolve() )
+		archive.finalize()
+	
+	} )
+
 }
+try{
 
-const distPath =  path.join(__dirname, '../dist')
-const pluginPath = path.join(__dirname, '../plugin')
-const zipPath = path.join(distPath, `${pkg.extra.textDomain}.zip`)
+	const distPath   = path.join( composer.dir, 'dist' )
+	const pluginPath = path.join( composer.dir, 'plugin' )
+	const zipPath    = path.join( distPath, `${composer.data.extra.textDomain}.zip` )
 
-// console.log(distPath, pluginPath, zipPath )
+	// console.log(distPath, pluginPath, zipPath);
 
-if (fs.existsSync(distPath)) {
-  fs.rmSync(distPath, { recursive: true });
+	if ( fs.existsSync( distPath ) ) fs.rmSync( distPath, { recursive: true } )
+
+	fs.mkdirSync( distPath )
+
+	zipDirectory( pluginPath, zipPath )
+
+}catch( e ){
+
+	console.error( e )
+
 }
-
-fs.mkdirSync(distPath);
-
-zipDirectory(pluginPath, zipPath )

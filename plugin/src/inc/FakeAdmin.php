@@ -83,6 +83,11 @@ class FakeAdmin extends Core {
      */
     public function actions(){
 
+        // add_action( 
+        //     'init', 
+        //     [ $this, 'load_textdomain' ],
+        // );
+        
         add_action( 
             'init', 
             [ $this, 'add_role' ],

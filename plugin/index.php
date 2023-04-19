@@ -1,2 +1,2 @@
-<?php // Ni sepo, ni sapo, callao 
+<?php // Ni sepo ni sapo, callao 
 

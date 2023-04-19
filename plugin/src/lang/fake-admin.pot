@@ -1,25 +1,25 @@
 # Copyright (C) 2023 Angelo
-# This file is distributed under the GPLv3.
+# This file is distributed under the GPL-3.0-only.
 msgid ""
 msgstr ""
-"Project-Id-Version: Fake admin 1.0.0\n"
+"Project-Id-Version: Fake Admin 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/fake-admin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-03-11T23:53:22+00:00\n"
+"POT-Creation-Date: 2023-04-18T19:54:33+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: fake-admin\n"
 
 #. Plugin Name of the plugin
-msgid "Fake admin"
+msgid "Fake Admin"
 msgstr ""
 
 #. Description of the plugin
-msgid "Prevents your admin user from being exposed to the public."
+msgid "🕵️‍♀️🔌 Prevent your administrator user from being exposed to the public with just a few clicks. Create a user or change the role of an existing one to Fake-Admin and you're done! easy to use and very practical."
 msgstr ""
 
 #. Author of the plugin
@@ -28,4 +28,24 @@ msgstr ""
 
 #. Author URI of the plugin
 msgid "https://pigeonposse.com"
+msgstr ""
+
+#: src/inc/Core.php:85
+msgid "There is no user created with the <b>Fake Admin</b> role, this can be dangerous when posting posts."
+msgstr ""
+
+#: src/inc/Core.php:86
+msgid "Create a new user"
+msgstr ""
+
+#: src/inc/Core.php:87
+msgid "or"
+msgstr ""
+
+#: src/inc/Core.php:88
+msgid "change user role"
+msgstr ""
+
+#: src/inc/Core.php:91
+msgid "Fake admin"
 msgstr ""

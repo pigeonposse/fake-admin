@@ -9,26 +9,41 @@
  * that starts the plugin.
  *
  * @wordpress-plugin
- * Plugin Name:       Fake Admin
- * Description:       🕵️‍♀️🔌 Prevents your admin user from being exposed to the public.
- * Version:           1.0.0
- * Author:            Angelo
- * Author URI:        https://pigeonposse.com
- * License:           GPL-3.0-only
- * License URI:       https://github.com/pigeonposse/fake-admin/blob/main/LICENSE
- * Text Domain:       fake-admin
- * Domain Path:       /web/lang
+ * Plugin Name: Fake Admin
+ * Description: 🕵️‍♀️🔌 Prevent your administrator user from being exposed to the public with just a few clicks. Create a user or change the role of an existing one to Fake-Admin and you're done! easy to use and very practical.
+ * Version: 1.0.1
+ * Author: Angelo
+ * Author URI: https://pigeonposse.com
+ * Donate link: https://pigeonposse.com/?popup=donate
+ * Text Domain: fake-admin
+ * Domain Path: /src/lang
+ * License: GPL-3.0-only
+ * License URI: https://github.com/pigeonposse/fake-admin/blob/main/LICENSE
  */
 
 /**
  * --------------------------------------------------------------
- * Ok, this is where the fun starts, bebesite.
+ * Ok, this is where the fun starts, bebesita/o/e.
  * --------------------------------------------------------------
  */
 
+/**
+ * LOADERS
+ */
 $loader = require_once __DIR__.'/vendor/autoload.php';
+
 $loader->addPsr4('PigeonPosse\\FakeAdmin\\', __DIR__.'/src/');
 $loader->addPsr4('PigeonPosse\\FakeAdmin\\Inc\\', __DIR__.'/src/inc/');
 $loader->addPsr4('PigeonPosse\\FakeAdmin\\Utils\\', __DIR__.'/src/utils/');
 
+
+/**
+ * CONSTATS
+ */
+define('FAKE_ADMIN_DIR_PATH', plugin_dir_path( __FILE__ ));
+define('FAKE_ADMIN_DIR_URL', plugin_dir_url( __FILE__ ));
+
+/**
+ * PLUGIN SOURCE
+ */
 require_once 'src/plugin.php';

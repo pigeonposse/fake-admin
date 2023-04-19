@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Fake Admin 1.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/fake-admin\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-04-18T11:28:16+00:00\n"
+"PO-Revision-Date: 2023-04-18 16:05+0200\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Domain: fake-admin\n"
+
+#. Plugin Name of the plugin
+msgid "Fake Admin"
+msgstr "Fake Admin"
+
+#. Author of the plugin
+msgid "Angelo"
+msgstr "Angelo"
+
+#. Author URI of the plugin
+msgid "https://pigeonposse.com"
+msgstr "https://pigeonposse.com"
+
+#: src/inc/Core.php:91
+msgid "Fake admin"
+msgstr "Administrador fals"
+
+#: src/inc/Core.php:85
+msgid "There is no user created with the <b>Fake Admin</b> role, this can be dangerous when posting posts."
+msgstr "No hi ha cap usuari creat amb el rol d’<b>Administrador fals</b>, això pot ser perillós quan es publiquen entrades o pàgines."
+
+#: src/inc/Core.php:86
+msgid "Create a new user"
+msgstr "Crea un usuari nou"
+
+#: src/inc/Core.php:87
+msgid "or"
+msgstr "o"
+
+#: src/inc/Core.php:88
+msgid "change user role"
+msgstr "canvia el rol d’usuari"
+
+#. Description of the plugin
+msgid "🕵️‍♀️🔌 Prevent your administrator user from being exposed to the public with just a few clicks. Create a user or change the role of an existing one to Fake-Admin and you're done! easy to use and very practical."
+msgstr "🕵️‍♀️🔌 Evita que el teu usuari administrador sigui exposat al públic amb només uns clics. Creeu un usuari o canvieu el rol d'un existent a Fake-Admin i llest! fàcil d'usar i molt pràctic."

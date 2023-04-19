@@ -24,13 +24,23 @@ class Core {
      */
     public function __construct( ) {
 
-    	$this->plugin_name      = 'fake_admin';
+    	$this->plugin_name      = 'fake-admin';
         $this->role_id          = 'pigeon_fake_admin';
         $this->admin_capability = 'update_core';
         $this->txt           	= $this->txt();
         $this->notices 			= new Notices();
 
     }
+
+    // public function load_textdomain() {
+
+	//     load_plugin_textdomain( 
+	//     	$this->plugin_name, 
+	//     	false, 
+	//     	FAKE_ADMIN_DIR_PATH . 'src/lang/' 
+	//     );
+
+	// }
 
     /**
      * Todo
@@ -71,19 +81,15 @@ class Core {
      *
      */
     protected function txt(){
-
-    	$name = $this->plugin_name;
-
-        $link = '<a href="%1$s">Create a new user</a> or <a href="%2$s">change user role</a>';
-    	$not  = "There is no user created with the <b>fake Administrator</b> role, this can be dangerous when posting posts. ". $link;
+    	
+		$not = __( 'There is no user created with the <b>Fake Admin</b> role, this can be dangerous when posting posts.', 'fake-admin' );
+		$not .= ' <a href="'.esc_url( network_admin_url('user-new.php') ).'">'.__('Create a new user', 'fake-admin').'</a>';
+		$not .= ' '.__('or', 'fake-admin').' ';
+		$not .= '<a href="'.esc_url( admin_url('users.php') ).'">'.__('change user role', 'fake-admin').'</a>.';
 
     	return [
-    		'role-name' 			=> __( 'Fake admin', $this->plugin_name ),
-    		'admin-fake-no-exist' 	=> sprintf( 
-	    		__( $not, $this->plugin_name ),
-	    		network_admin_url('user-new.php'),
-	    		admin_url('users.php'), 
-	    	),
+    		'role-name' 			=> __( 'Fake admin', 'fake-admin' ),
+    		'admin-fake-no-exist' 	=> $not, 
     	];
 
     }
