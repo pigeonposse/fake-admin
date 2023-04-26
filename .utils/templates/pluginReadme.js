@@ -8,12 +8,13 @@
 
 import { pkg, composer } from '../getPkg.js'
 import { pluginDesc }    from './pluginDesc.js'
+import { readFileSync }  from '../writeFile.js'
 
 const gitUrl     = composer.data.repositories.github.url
 const pluginName = composer.data.extra.pluginName
 
 export const pluginReadme = `=== ${pluginName} ===
-Contributors: ${composer.data.authors[0].name}
+Contributors: ${composer.data.extra.contributors.collective.WPuser}, ${composer.data.extra.contributors.author.WPuser}
 Tags: ${composer.data.extra.wpTags.join( ', ' )}
 Plugin Name: ${pluginName}
 Plugin URI: ${gitUrl}
@@ -27,11 +28,7 @@ Donate link: ${composer.data.funding[1].url}
 
 == Description ==
 
-${pluginDesc.main}
-
-= ${pluginDesc.howWork.title} =
-
-${pluginDesc.howWork.desc}
+${pluginDesc}
 
 = More info =
 
@@ -49,7 +46,9 @@ ${pluginDesc.howWork.desc}
 
 == Changelog ==
 
-* [View CHANGELOG](${gitUrl}/blob/main/CHANGELOG.md)
+This is a copy from: [CHANGELOG FILE](${gitUrl}/blob/main/CHANGELOG.md)
+
+${readFileSync( 'CHANGELOG.md' )}
 
 == Development / Contributing ==
 

@@ -41,15 +41,28 @@ DEVELOPED BY PIGEONPOSSE 🐦🌈
 -->
 <!-- PIGEONPOSSE END MARK -->
 
+<!-- PIGEONPOSSE START HEADER -->
+ 
 [![IMAGE](docs/banner.png)](https://wordpress.org/plugins/fake-admin)
 
+[![Web](https://img.shields.io/badge/Web-grey?style=flat-square)](https://pigeonposse.com) 
+[![About us](https://img.shields.io/badge/About%20us-grey?style=flat-square)](https://pigeonposse.com/?popup=about) 
+[![Github](https://img.shields.io/badge/Github-grey?style=flat-square)](https://github.com/pigeon-posse)
+[![Donate](https://img.shields.io/badge/Donate-pink?style=flat-square)](https://github.com/sponsors/PigeonPosse) 
+
+[![License](https://img.shields.io/github/license/pigeonposse/fake-admin?color=blue&label=License&style=flat-square)](https://wordpress.org/plugins/fake-admin)
+[![Version](https://img.shields.io/github/package-json/v/pigeonposse/fake-admin?color=a1b858&label&style=flat-square)](https://wordpress.org/plugins/fake-admin)
+
+<!-- PIGEONPOSSE END HEADER -->
+
 # Fake Admin - Wordpress plugin
+
+<!-- PIGEONPOSSE START DESCRIPTION -->
 
 🕵️‍♀️🔌 Wordpress plugin that prevents your admin user from being exposed to the public.
 
 ###
 
-<!-- PIGEONPOSSE START DESCRIPTION -->
 Have you ever published a post or page on WordPress from your admin account without realizing that you are exposing your admin user to the public? 🙈 It is a common mistake as well as frustrating, especially if your blog is personal and you are the administrator and blog writer.
 
 Do not care anymore! 🤗 With FakeAdmin you can prevent your admin user from being publicly exposed.
@@ -58,8 +71,7 @@ Do not care anymore! 🤗 With FakeAdmin you can prevent your admin user from be
 
 The plugin allows you to create a "ghost" user that looks like your admin user, but without the ability to create or edit anything. Once the *FakeAdmin* user is created, as an administrator, you can work on your WordPress site without worrying about exposing your admin user to the public. Everything you create or edit will be attributed to the user FakeAdmin and the security of your site will not be compromised.
 
-It's a simple and effective solution! Now you can work on your site with peace of mind knowing that you are protecting you.
-
+It's a simple and effective solution! Now you can work on your site with peace of mind knowing that you are protecting you. 
 
 <!-- PIGEONPOSSE END DESCRIPTION -->
 

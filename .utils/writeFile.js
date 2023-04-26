@@ -8,6 +8,8 @@ import fs           from 'fs'
 import { join }     from 'path'
 import { composer } from './getPkg.js'
 
+export const readFileSync = (path) => fs.readFileSync(  join( composer.dir, path ), 'utf-8' )
+
 export const writeSync = ( path, txt ) => {
 
 	const filePath = join( composer.dir, path )

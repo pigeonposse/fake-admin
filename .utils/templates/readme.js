@@ -12,7 +12,7 @@ import { pkg, composer } from '../getPkg.js'
 const gitUrl     = composer.data.repositories.github.url
 const author     = composer.data.extra.contributors.author
 const collective = composer.data.extra.contributors.collective
-
+const fundingUrl = composer.data.funding[0].url
 // const usage = `
 
 // ` 
@@ -29,7 +29,7 @@ You can contribute via **_Github_**.
 
 Help us to develop more interesting things.
 
-[![Donate](https://img.shields.io/badge/Donate-grey?style=flat-square)](${composer.data.funding[0].url}) 
+[![Donate](https://img.shields.io/badge/Donate-grey?style=flat-square)](${fundingUrl}) 
 
 
 ## 📜 License
@@ -56,17 +56,22 @@ _PigeonPosse_ is a ✨ **code development collective** ✨ focused on creating p
 `
 
 const markTxt = `<!--\n${mark}\n-->`
-const desc    = `${pluginDesc.main}
+const header  = ` 
+[![IMAGE](docs/banner.png)](${composer.data.homepage})
 
-### ${pluginDesc.howWork.title}
+[![Web](https://img.shields.io/badge/Web-grey?style=flat-square)](${collective.web}) 
+[![About us](https://img.shields.io/badge/About%20us-grey?style=flat-square)](${collective.web}/?popup=about) 
+[![Github](https://img.shields.io/badge/Github-grey?style=flat-square)](https://github.com/pigeon-posse)
+[![Donate](https://img.shields.io/badge/Donate-pink?style=flat-square)](${fundingUrl}) 
 
-${pluginDesc.howWork.desc}
-
+[![License](https://img.shields.io/github/license/${composer.data.name}?color=blue&label=License&style=flat-square)](${composer.data.homepage})
+[![Version](https://img.shields.io/github/package-json/v/${composer.data.name}?color=a1b858&label&style=flat-square)](${composer.data.homepage})
 `
 
 export const readme = {
 	// usage : usage,
-	org  : org,
-	mark : markTxt,
-	desc : desc,
+	org    : org,
+	header : header,
+	mark   : markTxt,
+	desc   : pluginDesc,
 }

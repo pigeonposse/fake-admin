@@ -68,9 +68,9 @@
 		"dockerComposeDevFile": "docker-compose-dev.yml",
 		"pluginDir": "plugin",
 		"pluginFile": "plugin/fake-admin.php",
-		"pluginLang": "plugin/src/lang",
-		"pluginDomainPath": "/src/lang",
-		"pluginPot": "plugin/src/lang/fake-admin.pot",
+		"pluginLang": "plugin/languages",
+		"pluginDomainPath": "/languages",
+		"pluginPot": "plugin/languages/fake-admin.pot",
 		"pluginReadMe": "plugin/readme.txt",
 		"releaseIt": ".release-it.json",
 		"wpTags": [
@@ -85,11 +85,16 @@
 		"contributors": {
 		 	"author": {
 				"name": "Angelo",
+				"WPuser": "AngelEspejo",
 				"email": "angelo@pigeonposse.com",
+				"web": "https://pigeonposse.com",
 				"github": "https://github.com/AngelEspejo"
 			},
 			"collective": {
 				"name": "PigeonPosse",
+				"WPuser": "PigeonPosse",
+				"WPDisplayName": "PigeonPosse collective",
+				"web": "https://pigeonposse.com",
 				"email": "dev@pigeonposse.com",
 				"github": "https://github.com/PigeonPosse"
 			}

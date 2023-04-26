@@ -38,8 +38,8 @@ export const pluginInfo = `<?php
  * Plugin Name: ${composer.data.extra.pluginName}
  * Description: ${composer.data.extra.description}
  * Version: ${pkg.data.version}
- * Author: ${composer.data.authors[0].name}
- * Author URI: ${composer.data.authors[0].homepage}
+ * Author: ${composer.data.extra.contributors.collective.WPDisplayName}
+ * Author URI: ${composer.data.extra.contributors.collective.web}
  * Donate link: ${composer.data.funding[1].url}
  * Text Domain: ${composer.data.extra.textDomain}
  * Domain Path: ${composer.data.extra.pluginDomainPath}

@@ -24,6 +24,13 @@ const dynamicReadme = async () => {
 		'<!-- PIGEONPOSSE END DESCRIPTION -->', 
 		readme.desc,
 	)
+
+	await addTextBetweenAMark( 
+		'README.md', 
+		'<!-- PIGEONPOSSE START HEADER -->', 
+		'<!-- PIGEONPOSSE END HEADER -->', 
+		readme.header,
+	)
 	
 	await addTextBetweenAMark( 
 		'README.md',

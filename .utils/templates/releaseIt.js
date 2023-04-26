@@ -23,9 +23,9 @@ const data = {
 			'git push', 
 		],
 	    'after:bump' : [
+	    	'pnpm auto-changelog -p',
 			'pnpm readme',
 			'pnpm build',
-	    	'pnpm auto-changelog -p',
 	    ],
 	    'after:git:release' : 'echo \'After git push, before github release\'',
 	    'after:release'     : [
