@@ -94,8 +94,8 @@ jobs:
         env:
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-          SLUG: fake-admin # optional, remove if GitHub repo name matches SVN slug, including capitalization
-          BUILD_DIR: fake-admin
+          # SLUG: fake-admin # optional, remove if GitHub repo name matches SVN slug, including capitalization
+          BUILD_DIR: plugin
 
       #########################################################################
       # GITHUB RELEASE
