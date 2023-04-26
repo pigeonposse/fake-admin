@@ -54,7 +54,7 @@
 			"url": "https://pigeonposse.com/?popup=donate"
 		}
 	],
-	"homepage": "https://github.com/pigeonposse/fake-admin",
+	"homepage": "https://wordpress.org/plugins/fake-admin",
 	"repositories": {
 		"github": {
 			"type": "git",

@@ -4,7 +4,9 @@
  * @description Todo.
  */
 
-import { mark }          from './mark.js'
+import { mark }       from './mark.js'
+import { pluginDesc } from './pluginDesc.js'
+
 import { pkg, composer } from '../getPkg.js'
 
 const gitUrl     = composer.data.repositories.github.url
@@ -54,9 +56,17 @@ _PigeonPosse_ is a ✨ **code development collective** ✨ focused on creating p
 `
 
 const markTxt = `<!--\n${mark}\n-->`
+const desc    = `${pluginDesc.main}
+
+### ${pluginDesc.howWork.title}
+
+${pluginDesc.howWork.desc}
+
+`
 
 export const readme = {
 	// usage : usage,
 	org  : org,
 	mark : markTxt,
+	desc : desc,
 }

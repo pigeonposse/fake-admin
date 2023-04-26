@@ -41,7 +41,7 @@ DEVELOPED BY PIGEONPOSSE 🐦🌈
 -->
 <!-- PIGEONPOSSE END MARK -->
 
-[![IMAGE](docs/banner.png)](https://pigeonposse.com)
+[![IMAGE](docs/banner.png)](https://wordpress.org/plugins/fake-admin)
 
 # Fake Admin - Wordpress plugin
 
@@ -49,16 +49,19 @@ DEVELOPED BY PIGEONPOSSE 🐦🌈
 
 ###
 
-Have you ever published a post or page on ***WordPress*** from your admin account without realizing that you are exposing your admin user to the public? 🙈 It is a common mistake as well as frustrating, especially if your blog is personal and you are the administrator and blog writer.
+<!-- PIGEONPOSSE START DESCRIPTION -->
+Have you ever published a post or page on WordPress from your admin account without realizing that you are exposing your admin user to the public? 🙈 It is a common mistake as well as frustrating, especially if your blog is personal and you are the administrator and blog writer.
 
-Do not care anymore! 🤗 With **FakeAdmin** you can prevent your admin user from being publicly exposed.
+Do not care anymore! 🤗 With FakeAdmin you can prevent your admin user from being publicly exposed.
 
 ### How does it work?
 
-The plugin allows you to create a "ghost" user that looks like your admin user, but without the ability to create or edit anything. Once the *FakeAdmin* user is created, as an administrator, you can work on your WordPress site without worrying about exposing your admin user to the public. Everything you create or edit will be attributed to the user *FakeAdmin* and the security of your site will not be compromised.
+The plugin allows you to create a "ghost" user that looks like your admin user, but without the ability to create or edit anything. Once the *FakeAdmin* user is created, as an administrator, you can work on your WordPress site without worrying about exposing your admin user to the public. Everything you create or edit will be attributed to the user FakeAdmin and the security of your site will not be compromised.
+
+It's a simple and effective solution! Now you can work on your site with peace of mind knowing that you are protecting you.
 
 
-It's a simple and effective solution! Now you can work on your site with peace of mind knowing that you are protecting your personal information. Test it! 🚀
+<!-- PIGEONPOSSE END DESCRIPTION -->
 
 ## 🗝 Prerequisites
 
@@ -66,23 +69,31 @@ It's a simple and effective solution! Now you can work on your site with peace o
 
 ## 🔑 Installation
 
-- Install plugin via [WordPress repository](https://wordpress.org/plugins/).
-- Install plugin manually [Download](https://github.com/pigeonposse/fake-admin/releases).
+1. Install plugin _(2 ways)_
+	+ Via [WordPress repository](https://wordpress.org/plugins/fake-admin).
+	+ Manually [Download](https://github.com/pigeonposse/fake-admin/releases) & Upload plugin to the “/wp-content/plugins/” directory.
+
+2. Activate the plugin through the “Plugins” menu in WordPress.
 
 ## ⚙️ Usage
 
 #### Create user with "Fake admin" role or change user role with "Fake admin"
 
-| ![Guide 1](docs/guide-1.png) | ![Guide 2](docs/guide-2.png) | ![Guide 3](docs/guide-3.png) |
+| ![Guide 1](.wordpress-org/screenshot-1.png) | ![Guide 2](.wordpress-org/screenshot-2.png) | ![Guide 3](.wordpress-org/screenshot-3.png) |
 | -------------- | -------------- | -------------- |
 
 #### Enjoy it!
 
 Now you can create any ***post***, ***page*** or ***post-type*** and if your user is admin automatically change post author to "admin fake" user.
 
-| ![Guide 4](docs/guide-4.png) | ![Guide 5](docs/guide-5.png) |
+| ![Guide 4](.wordpress-org/screenshot-4.png) | ![Guide 5](.wordpress-org/screenshot-5.png) |
 | ------------------------- | ------------------------- |
 
+<br> 
+<p align="center">
+<img src="docs/logo.png" alt="Logo" width="100"/>
+</p>
+<br> 
 
 <!-- PIGEONPOSSE START ORG -->
 

@@ -16,8 +16,7 @@ import { spawnSync } from 'child_process'
 import { writeSync } from './writeFile.js'
 import { composer }  from './getPkg.js'
 import { releaseIt } from './templates/releaseIt.js'
-import { exec } from './exec.js'
-
+import { exec }      from './exec.js'
 
 const questions = [
 	{
