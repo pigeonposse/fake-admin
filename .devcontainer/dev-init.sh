@@ -12,11 +12,6 @@ sudo sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/in
 sudo echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 sudo echo "source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
 
-sudo figlet "PIGEONPOSSE
-------
-FAKE-ADMIN
-"
-
 sudo echo alias pn="pnpm" >> ~/.zshrc
 sudo echo "export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
@@ -24,6 +19,11 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac" >> ~/.zshrc
 
-pn start
+pnpm start
+
+sudo figlet "PIGEONPOSSE
+------
+FAKE-ADMIN
+"
 
 /bin/zsh

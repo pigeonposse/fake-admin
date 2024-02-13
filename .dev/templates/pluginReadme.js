@@ -19,7 +19,7 @@ Tags: ${composer.data.extra.wpTags.join( ', ' )}
 Plugin Name: ${pluginName}
 Plugin URI: ${gitUrl}
 Requires at least: 5.3
-Tested up to: 6.2
+Tested up to: 6.4.3
 Stable tag: ${pkg.data.version}
 Requires PHP: 5.6
 License: ${composer.data.license}
