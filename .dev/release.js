@@ -19,10 +19,13 @@ import { exec }      from './exec.js'
 import { isGitHubAuthenticated } from './gh.js'
 
 const auth      = isGitHubAuthenticated()
+const noRelease = process.argv.includes( '--no-release' )
 
 if( !auth ) {
 
-	console.log( '❌ You need to logged with github. use: gh auth login' )
+	console.log( '❌ You need to logged with github CLI' )
+	console.log('CMD: gh auth login')
+	console.log('You may use SSH for git to')
 	process.exit()
 
 }
@@ -64,13 +67,15 @@ const release = async () => {
 		const cmd = {
 			gitAdd    : 'git add ' + answers.git_add,
 			gitCommit : 'git commit -m "' + answers.git_commit + '"',
+			push      : 'git push -u origin main',
 			releaseIt : 'pnpm release-it',
 		}
 		
 	 	exec( cmd.gitAdd )
 	 	exec( cmd.gitCommit )
-	 	exec( cmd.releaseIt )
-
+		if ( noRelease ) exec( cmd.push )
+		else exec( cmd.releaseIt )
+	
 	} )
 
 }

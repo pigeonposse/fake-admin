@@ -1,7 +1,7 @@
 /**
- * Core for .Utils folder.
+ * Core for .DEV folder.
  *
- * @description Functions for .Utils folder.
+ * @description Functions for .DEV folder.
  */
 import { execSync } from 'child_process'
 export const isGitHubAuthenticated = () =>{
