@@ -1,0 +1,30 @@
+/** 
+ * *****************************************************************************
+ * .devcontainer/devcontainer.json Configuration
+ * *****************************************************************************
+ *
+ * @description Configuration file for a development container in VSCode.
+ *              This file defines the development environment for your project, 
+ *              including tools, settings, and extensions.
+ * @see https://aka.ms/devcontainer.json
+ * @see https://github.com/devcontainers/templates/tree/main/src/typescript-node
+ *
+ * *****************************************************************************
+ */
+ {
+	"name": "fake-admin",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node",
+	"postCreateCommand": ". /workspaces/fake-admin/.devcontainer/dev-init.sh",
+	"shutdownAction": "stopContainer",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/php:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/composer:1": {
+			"version": "latest"
+		}
+	}
+}

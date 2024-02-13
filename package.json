@@ -5,10 +5,10 @@
 	"type": "module",
 	"main": "plugin/fake-admin.php",
 	"engines": {
-		"node": "^12.17.0 || ^14.13 || >=16.0.0",
-		"pnpm": ">=3"
+		"node": ">=16.0.0",
+		"pnpm": ">=8"
 	},
-	"packageManager": "pnpm@7.26.0",
+	"packageManager": "pnpm@8.15.1",
 	"scripts": {
 		"start": "composer install && pnpm i",
 		"update": "pnpm up && composer update",

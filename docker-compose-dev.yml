@@ -27,17 +27,22 @@ services:
   
   db:
 
-    image: mariadb
+    # image: mariadb
+    image: lscr.io/linuxserver/mariadb
     container_name: fake-admin-db
-    command: --default-authentication-plugin=mysql_native_password  
+    # command: --default-authentication-plugin=mysql_native_password  
     volumes:
-      - './dev-env/db:/var/lib/mysql'
+      # - './dev-env/db:/var/lib/mysql'
+      - './dev-env/db:/config'
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=wordpress
       - MYSQL_USER=wordpress
       - MYSQL_PASSWORD=wordpress
+      - TZ=Europe/Madrid
+      - PUID=1000
+      - PGID=1000
 
 
   #########################################################################

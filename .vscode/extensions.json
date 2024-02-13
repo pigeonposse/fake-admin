@@ -1,0 +1,28 @@
+{
+	/** 
+	* *****************************************************************************
+	* VSCODE extensions Config
+	* *****************************************************************************
+	*
+	* @description Specifies the recommended extensions for your Visual Studio Code (VSCode) project.
+	* These extensions enhance functionality and are automatically suggested for installation.
+	* @see https://code.visualstudio.com/docs/editor/extension-gallery
+	*
+	* *****************************************************************************
+	*/
+    "recommendations": [
+        "davidanson.vscode-markdownlint",
+        "gruntfuggly.todo-tree",
+        "shd101wyy.markdown-preview-enhanced",
+        "dbaeumer.vscode-eslint",
+        "nhoizey.gremlins",
+        "christian-kohler.npm-intellisense",
+        "jacano.vscode-pnpm",
+        "redhat.vscode-yaml",
+        "editorconfig.editorconfig",
+        "devsense.composer-php-vscode",
+        "bmewburn.vscode-intelephense-client",
+        "junstyle.php-cs-fixer",
+        "ms-vscode-remote.remote-containers"
+    ]
+}

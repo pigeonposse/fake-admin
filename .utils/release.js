@@ -12,11 +12,20 @@
  */
 
 import inquirer      from 'inquirer'
-import { spawnSync } from 'child_process'
 import { writeSync } from './writeFile.js'
 import { composer }  from './getPkg.js'
 import { releaseIt } from './templates/releaseIt.js'
 import { exec }      from './exec.js'
+import { isGitHubAuthenticated } from './gh.js'
+
+const auth      = isGitHubAuthenticated()
+
+if( !auth ) {
+
+	console.log( '❌ You need to logged with github. use: gh auth login' )
+	process.exit()
+
+}
 
 const questions = [
 	{

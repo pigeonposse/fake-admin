@@ -16,7 +16,7 @@ class Core {
      * 'id'         contains the unique ID of user role
      *
      */
-    protected $role_id, $admin_capability, $txt, $notices;
+    protected $role_id, $admin_capability, $txt, $notices, $plugin_name;
 
     /**
      * Initialize the class and set its properties.
