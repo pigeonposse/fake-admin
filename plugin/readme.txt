@@ -4,7 +4,7 @@ Tags: security, users, roles, admin, wp-admin, administrator
 Plugin Name: Fake Admin
 Plugin URI: https://github.com/pigeonposse/fake-admin
 Requires at least: 5.3
-Tested up to: 6.2
+Tested up to: 6.4.3
 Stable tag: 1.0.7
 Requires PHP: 5.6
 License: GPL-3.0-only
