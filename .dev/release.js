@@ -16,7 +16,7 @@ import { writeSync } from './writeFile.js'
 import { composer }  from './getPkg.js'
 import { releaseIt } from './templates/releaseIt.js'
 import { exec }      from './exec.js'
-import { isGitHubAuthenticated } from './gh.js'
+import { addGitUser, checkGitUserEmail, isGitHubAuthenticated } from './gh.js'
 
 const auth      = isGitHubAuthenticated()
 const noRelease = process.argv.includes( '--no-release' )
@@ -55,6 +55,9 @@ const questions = [
 
 const release = async () => {
 
+	const git = checkGitUserEmail()
+	if (!git) await addGitUser()
+	
 	writeSync( composer.data.extra.releaseIt, releaseIt )
 	
 	console.log( '' )
