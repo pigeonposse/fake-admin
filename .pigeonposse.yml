@@ -12,8 +12,8 @@ web:
     description: "{{composer.description}}"
     homepage: "{{composer.homepage}}"
     repo: "{{composer.repositories.github.url}}"
-    logo: "https://raw.githubusercontent.com/{{composer.name}}/main/docs/logo.png"
-    banner: "https://raw.githubusercontent.com/{{composer.name}}/main/docs/banner.png"
+    logo: "https://raw.githubusercontent.com/{{package.name}}/main/docs/logo.png"
+    banner: "https://raw.githubusercontent.com/{{package.name}}/main/docs/banner.png"
 
 
 ###############################################################################
