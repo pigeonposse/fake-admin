@@ -4,10 +4,11 @@
 
 web:
   
-  - id: "{{package.name}}"
-    name: "{{composer.extra.pluginName}}"
+  - id: "fake-admin"
+    name: "Fake admin"
     type: plugin
-    subtype: wordpress
+    subtypes: 
+      - wordpress
     version: "{{package.version}}"
     description: "{{composer.description}}"
     homepage: "{{composer.homepage}}"
