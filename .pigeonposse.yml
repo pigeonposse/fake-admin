@@ -7,6 +7,7 @@ web:
   - id: "fake-admin"
     name: "Fake admin"
     type: 
+      - plugin
       - wp-plugin
     version: "{{package.version}}"
     description: "{{composer.description}}"
