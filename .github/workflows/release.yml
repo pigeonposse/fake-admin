@@ -21,7 +21,7 @@ jobs:
       # INIT
       #########################################################################
       - name: checks-out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Install php
         uses: "shivammathur/setup-php@v2"
         with:
