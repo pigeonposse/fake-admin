@@ -32,7 +32,7 @@
 ██║  ██║██████╔╝██║ ╚═╝ ██║██║██║ ╚████║        
 ╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝                        
                                                 
-VERSION:    1.0.11 
+VERSION:    1.0.12 
 AUTHOR:     Angelo (https://github.com/AngelEspejo)
 REPOSITORY: https://github.com/pigeonposse/fake-admin
 
