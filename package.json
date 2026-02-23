@@ -32,12 +32,10 @@
 	},
 	"devDependencies": {
 		"@pigeon-posse/eslint-config": "^1.0.1",
-		"@pigeon-posse/pkg-extended-scripts": "^0.3.0",
 		"@release-it/bumper": "^4.0.2",
 		"archiver": "^7.0.1",
 		"auto-changelog": "^2.4.0",
 		"chalk": "^5.2.0",
-		"dotenv": "^16.0.3",
 		"eslint": "^8.38.0",
 		"eslint-plugin-align-assignments": "^1.1.2",
 		"eslint-plugin-align-import": "^1.0.0",

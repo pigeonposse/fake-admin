@@ -11,9 +11,6 @@ importers:
       '@pigeon-posse/eslint-config':
         specifier: ^1.0.1
         version: 1.0.1(eslint-plugin-align-assignments@1.1.2(eslint@8.57.1))(eslint-plugin-align-import@1.0.0)(eslint-plugin-html@7.1.0)(eslint-plugin-promise@6.6.0(eslint@8.57.1))(eslint@8.57.1)
-      '@pigeon-posse/pkg-extended-scripts':
-        specifier: ^0.3.0
-        version: 0.3.0
       '@release-it/bumper':
         specifier: ^4.0.2
         version: 4.0.2(release-it@15.11.0)
@@ -26,9 +23,6 @@ importers:
       chalk:
         specifier: ^5.2.0
         version: 5.6.2
-      dotenv:
-        specifier: ^16.0.3
-        version: 16.6.1
       eslint:
         specifier: ^8.38.0
         version: 8.57.1
@@ -208,11 +202,6 @@ packages:
       eslint-plugin-align-import: '>= 1'
       eslint-plugin-html: '>= 7'
       eslint-plugin-promise: '>= 6'
-
-  '@pigeon-posse/pkg-extended-scripts@0.3.0':
-    resolution: {integrity: sha512-D+7j/Y9Cf9VT4DpDYRwfLRy9zQAf4S7kIzQ1LSE1IXUNBs2hQQhsJ+pn83HdVDattpmzCcbfE9Ut6PePEWHdww==}
-    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
-    hasBin: true
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -716,10 +705,6 @@ packages:
   dot-prop@6.0.1:
     resolution: {integrity: sha512-tE7ztYzXHIeyvc7N+hR3oi7FIbf/NIjVP9hmAt3yMXzrQ072/fpjGLx2GxNxGxUl5V73MEqYzioOMoVhGMJ5cA==}
     engines: {node: '>=10'}
-
-  dotenv@16.6.1:
-    resolution: {integrity: sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==}
-    engines: {node: '>=12'}
 
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
@@ -2654,11 +2639,6 @@ snapshots:
       eslint-plugin-html: 7.1.0
       eslint-plugin-promise: 6.6.0(eslint@8.57.1)
 
-  '@pigeon-posse/pkg-extended-scripts@0.3.0':
-    dependencies:
-      chalk: 5.6.2
-      js-yaml: 4.1.1
-
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
@@ -3202,8 +3182,6 @@ snapshots:
   dot-prop@6.0.1:
     dependencies:
       is-obj: 2.0.0
-
-  dotenv@16.6.1: {}
 
   dunder-proto@1.0.1:
     dependencies:

@@ -7,9 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-
   build:
-
     name: Release in GitHub
     runs-on: "ubuntu-latest"
     permissions:
@@ -20,27 +18,30 @@ jobs:
       #########################################################################
       # INIT
       #########################################################################
-      - name: checks-out repository
+
+      - name: ⬇️🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.12.1
+      - name: ⬇️🛎 Checkout
         uses: actions/checkout@v4
-      - name: Install php
+        with:
+          persist-credentials: false
+      - name: ⬇️🥡 Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - name: ⬇️🟢 Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+          cache: 'pnpm'
+      - name: ⬇️ Install php
         uses: "shivammathur/setup-php@v2"
         with:
           php-version: "latest"
-      - name: Install composer
+      - name: ⬇️ Install composer
         uses: "ramsey/composer-install@v2"
         with:
           composer-options: "--ignore-platform-reqs --optimize-autoloader"
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        id: pnpm-install
-
-      #########################################################################
-      # IF IS IN MAIN BRANCH
-      #########################################################################
-
-      # - name: Exit if not on MAIN branch
-      #   if: endsWith(github.ref, 'main') == false
-      #   run: exit -1
 
       #########################################################################
       # BUILD PKG
@@ -48,22 +49,19 @@ jobs:
 
       - name: Install pkg dependencies
         run: |
-          pnpm i
+          export npm_config_build_from_source=false
+          pnpm install --no-frozen-lockfile --ignore-scripts
           pnpm build
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
       #########################################################################
-      # GET PKG INFO
+      # WORDPRESS PLUGIN DEPLOY
       #########################################################################
 
       - name: Get package info
         id: package
         uses: codex-team/action-nodejs-package-info@v1.1
-
-      #########################################################################
-      # WORDPRESS PLUGIN DEPLOY
-      #########################################################################
 
       - name: WordPress Plugin Deploy
         uses: 10up/action-wordpress-plugin-deploy@stable
@@ -71,6 +69,7 @@ jobs:
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           BUILD_DIR: plugin
+          VERSION:  ${{ steps.package.outputs.version }}
 
       #########################################################################
       # GITHUB RELEASE
