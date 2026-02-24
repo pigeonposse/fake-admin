@@ -11,7 +11,7 @@
  * @wordpress-plugin
  * Plugin Name: Fake Admin
  * Description: Prevent your administrator user from being exposed to the public with just a few clicks. Create a user or change the role of an existing one to Fake-Admin and you're done! easy to use and very practical. 🕵️‍♀️🔌
- * Version: 1.0.13
+ * Version: 1.0.14
  * Author: PigeonPosse collective
  * Author URI: https://pigeonposse.com
  * Donate link: https://pigeonposse.com/?popup=donate
