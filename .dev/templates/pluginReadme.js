@@ -15,7 +15,7 @@ const pluginName = composer.data.extra.pluginName
 
 export const pluginReadme = `=== ${pluginName} ===
 Contributors: ${composer.data.extra.contributors.collective.WPuser}, ${composer.data.extra.contributors.author.WPuser}
-Short Description: {${composer.data.extra.shortDescription}}
+Short Description: ${composer.data.extra.shortDescription}
 Tags: ${composer.data.extra.wpTags.slice(0, 5).join( ', ' )}
 Plugin Name: ${pluginName}
 Plugin URI: ${gitUrl}
