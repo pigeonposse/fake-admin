@@ -15,7 +15,6 @@ const pluginName = composer.data.extra.pluginName
 
 export const pluginReadme = `=== ${pluginName} ===
 Contributors: ${composer.data.extra.contributors.collective.WPuser}, ${composer.data.extra.contributors.author.WPuser}
-Short Description: ${composer.data.extra.shortDescription}
 Tags: ${composer.data.extra.wpTags.slice(0, 5).join( ', ' )}
 Plugin Name: ${pluginName}
 Plugin URI: ${gitUrl}
@@ -26,6 +25,8 @@ Requires PHP: 5.6
 License: ${composer.data.license}
 License URI: ${gitUrl}/blob/main/LICENSE
 Donate link: ${composer.data.funding[1].url}
+
+${composer.data.extra.shortDescription}
 
 == Description ==
 
