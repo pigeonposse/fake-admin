@@ -1,6 +1,7 @@
 === Fake Admin ===
 Contributors: PigeonPosse, AngelEspejo
-Tags: security, users, roles, admin, wp-admin, administrator
+Tags: security, users, roles, admin, wp-admin
+Short Description: Prevent your administrator user from being exposed to the public with just a few clicks.
 Plugin Name: Fake Admin
 Plugin URI: https://github.com/pigeonposse/fake-admin
 Requires at least: 5.3

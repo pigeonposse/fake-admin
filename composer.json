@@ -67,7 +67,8 @@
 	"extra": {
 		"pluginName": "Fake Admin",
 		"textDomain": "fake-admin",
-		"description": "🕵️‍♀️🔌 Prevent your administrator user from being exposed to the public with just a few clicks. Create a user or change the role of an existing one to Fake-Admin and you're done! easy to use and very practical.",
+		"description": "Prevent your administrator user from being exposed to the public with just a few clicks. Create a user or change the role of an existing one to Fake-Admin and you're done! easy to use and very practical. 🕵️‍♀️🔌",
+		"shortDescription": "Prevent your administrator user from being exposed to the public with just a few clicks.",
 		"dockerComposeDevFile": "docker-compose-dev.yml",
 		"pluginDir": "plugin",
 		"pluginFile": "plugin/fake-admin.php",
@@ -81,9 +82,9 @@
 			"users", 
 			"roles", 
 			"admin", 
-			"wp-admin", 
-			"administrator"
+			"wp-admin"
 		],
+		"testedUpTo": "6.9.1",
 		"devPort" : "41312",
 		"contributors": {
 		 	"author": {

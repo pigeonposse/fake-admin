@@ -15,11 +15,12 @@ const pluginName = composer.data.extra.pluginName
 
 export const pluginReadme = `=== ${pluginName} ===
 Contributors: ${composer.data.extra.contributors.collective.WPuser}, ${composer.data.extra.contributors.author.WPuser}
-Tags: ${composer.data.extra.wpTags.join( ', ' )}
+Short Description: {${composer.data.extra.shortDescription}}
+Tags: ${composer.data.extra.wpTags.slice(0, 5).join( ', ' )}
 Plugin Name: ${pluginName}
 Plugin URI: ${gitUrl}
 Requires at least: 5.3
-Tested up to: 6.9.1
+Tested up to: ${composer.data.extra.testedUpTo}
 Stable tag: ${pkg.data.version}
 Requires PHP: 5.6
 License: ${composer.data.license}
